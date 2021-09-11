@@ -7,30 +7,13 @@ namespace Lab1_Part4_05
     {
         public static void Main(string[] args)
         {
+            long result = 1;
             for (int i = 1; i <= 20; i++)
             {
-                List<int> list = new List<int>();
-                for (int j = i; j > 0; j--)
-                {
-                    if (i % j == 0)
-                    {
-                        list.Add(j);
-                    }
-                }
-
-                Display(i, list);
-            }
-        }
-
-        static void Display(int number, List<int> list)
-        {
-            var result = $"factorials of the {number}: ";
-            foreach (var a in list)
-            {
-                result += Convert.ToString(a) + " ";
+                result *= i;
             }
 
-            Console.WriteLine(result);
+            Console.WriteLine($"factorials of the integers from 1 to 20: {result}");   
         }
     }
 }
